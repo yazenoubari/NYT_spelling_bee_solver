@@ -11,7 +11,7 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 ### <Br> Find all the possible words that fit these constraints and rules:
 - Words must contain at least 4 letters.
 - Words must include the center letter.
-- Our word list does not include words that are obscure, hyphenated, or proper nouns.
+- Word must not be obscure, hyphenated, or proper nouns.
 - Letters can be used more than once. <Br>
 ### Score points to increase your rating:
 - 4-letter words are worth 1 point each.
