@@ -34,7 +34,7 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 > 1. Take a screenshot of the game, while excluding any text other than the 7 letters of the game. 
 >   - ##### ***Only [.png], [.jpg], or [.tif] file extentions are permitted.***
 > 2. Paste your image path into the program. There is a dedicated folder to save your images in the /src/resources/images directory in the project root.
->   - ##### ***If the image path is cannot be followed or the file cannot be found, the program will throw an error, and force the user into manual mode.***
+>   - ##### ***If the image path cannot be followed or the file cannot be found, the program will throw an error, and force the user into manual mode.***
 >   
 ***
 ### _THE WORKINGS of the program_:
