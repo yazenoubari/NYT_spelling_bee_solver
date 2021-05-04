@@ -49,25 +49,25 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 > #### Here was the process:
 > 1. Grayscale the raw image. <Br>
 >
->![Gray Scale](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/grayscale.png)
+>   ![Gray Scale](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/grayscale.png)
 >
 > 2. Remove the haziness and unwanted shadings in the photo: replace some darker grey shades to black, and any other lighter shades to white. This creates a binary black-white image, which is easier to process.<Br>
 > 
->![Binary](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/final.png)
+>   ![Binary](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/final.png)
 >
 > 3. Crop the image from each side: create an array of all the pixel colors of the image. Then cycle through each pixel by row or column until it encounters a black-colored pixel. The row/column index is saved, and the image is trimmed at that location. This process is repeated four times along each image border.<Br>
 >
->![Cropped](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/cropped.png)
+>   ![Cropped](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/cropped.png)
 >
 > 4. Create images of each of the letters: give the cartesian location of each letter using it relationship to the image's length and width. These proportions will vary for every letter. E.g. an letter in the center of an image is at ''0.5 * width'' of image.<Br>
 > 
-> ![A](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_TOP.png)
-> ![V](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_BOT.png)
-> ![C](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/l_TOP.png)
-> ![P](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/l_BOT.png)
-> ![L](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_TOP.png)
-> ![T](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_MID.png)
-> ![E](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_BOT.png)
+>     ![A](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_TOP.png)
+>     ![V](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_BOT.png)
+>     ![C](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/l_TOP.png)
+>     ![P](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/l_BOT.png)
+>     ![L](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_TOP.png)
+>     ![T](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_MID.png)
+>     ![E](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_BOT.png)
 > 
 > 5. Send all 7 of the images through the Tesseract OCR, retrieve the letters, and send to the logic portion of the program.
 > 
