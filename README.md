@@ -42,8 +42,17 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 ***
 ### _THE WORKINGS of the program_:
 #### The Logic:
+> All Unix-like systems contain a .txt file with an official list of English words. These words are then transferred line-by-line into an arrayList. Each array index will correspond to an English word. <Br>
+> 
 > The inputted characters are assigned into a char arrayList. This is an expandable memory set, in order to stay unrestrained by character count. The char arrayList is then cycled through and compared to each letter of a word. If there is a character match, an integer variable, e.g., 'int' increases by one. If 'int' is the same size as the length of that word, then we know that the word was only composed of letters found in that character list. This cycle is then continued for every word in the dictionary.
-> <Br>All Unix-like systems contain a .txt file with an official list of English words. These words are then transferred line-by-line into an arrayList. Each array index will correspond to an English word.
+> ```java
+> int lettersMatch = 0;
+>		for (int i = 0; i < word.length(); i++) {
+>			for (Character charLetter : allLetters)
+>				if (charLetter == word.charAt(i)) lettersMatch++;
+>		}
+>		return lettersMatch == word.length();
+> ```
 > 
 #### The OCR:
 > The program uses Google's Tesseract OCR to extract the letters from the screenshot. <Br>
