@@ -13,15 +13,16 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 - Words must include the center letter.
 - Word must not be obscure, hyphenated, or proper nouns.
 - Letters can be used more than once. <Br>
-### Score points to increase your rating:
-- 4-letter words are worth 1 point each.
-- Longer words earn 1 point per letter.
-- Each puzzle includes at least one “panagram” which uses every letter. These are worth 7 extra points!
 
     ###### _*Note: Not all words are valid, despite being officially recognized._ <Br>
   ##### From the New York Times:
   > ###### "Every Spelling Bee puzzle is hand-curated to focus on relatively common words (with a couple tough ones here and there to keep it challenging).
   > ###### ...The key word here is 'common'. We just removed words from Spelling Bee that we believe are not common enough, despite them being defined words, in order to maintain a level-field for all of our solvers." 
+
+### Score points to increase your rating:
+- 4-letter words are worth 1 point each.
+- Longer words earn 1 point per letter.
+- Each puzzle includes at least one “panagram” which uses every letter. These are worth 7 extra points!
 ***
 ### _USING THE PROGRAM:_
 #### __Manual Mode:__
