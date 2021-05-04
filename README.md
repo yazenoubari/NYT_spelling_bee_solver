@@ -71,7 +71,7 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 >
 >     ![Cropped](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/cropped.png)
 >
-> 4. Create images of each of the letters: give the cartesian location of each letter using it relationship to the image's length and width. These proportions will vary for every letter. E.g. an letter in the center of an image is at ''0.5 * width'' of image.<Br>
+> 4. Create images of each of the letters: give the cartesian location of each letter using it relationship to the image's length and width. These proportions will vary for every letter. In this example, 'T' is at the center of the image. This location can be defined by: ''0.5 * width'' & ''0.5 * length'' of image.<Br>
 > 
 >     ![A](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_TOP.png)
 >     ![V](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_BOT.png)
