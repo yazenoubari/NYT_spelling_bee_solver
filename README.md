@@ -8,7 +8,7 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 ### _THE GAME:_
 ![Spelling Bee](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/main/spelling_bee.png)
 
-### <Br> _Finding all the possible words that fit these constraints and rules:_
+### <Br> Find all the possible words that fit these constraints and rules:
 - Words must contain at least 4 letters.
 - Words must include the center letter.
 - Our word list does not include words that are obscure, hyphenated, or proper nouns.
@@ -56,22 +56,22 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 > 
 #### The OCR:
 > The program uses Google's Tesseract OCR to extract the letters from the screenshot. <Br>
-> Originally, I was hoping that Tesseract could identify all 7 of the characters from the raw image, though, due to how the letters were scattered, it could only identify one character at a time——this proved a big challenge for me. The most immediate solution was to singly create an image for each one of the letters (7 images total, for 7 letters) and feed those, individually, into the OCR.
+> Originally, I was hoping that Tesseract could identify all 7 of the characters from the raw image, though, due to how the letters were scattered, it could only identify one character at a time—this proved a big challenge for me. The most immediate solution was to singly create an image for each one of the letters (7 images total, for 7 letters) and feed those, individually, into the OCR.
 > <Br>To recognize the location of each of the letters in any random image of the game board, the program had to be cropped to known proportions.<Br>
 > #### Here was the process:
 > 1. Grayscale the raw image. <Br>
 >
 >     ![Gray Scale](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/grayscale.png)
 >
-> 2. Remove the haziness and unwanted shadings in the photo: replace some darker grey shades to black, and any other lighter shades to white. This creates a binary black-white image, which is easier to process.<Br>
+> 2. Remove the haziness and unwanted shadings in the photo: replace some darker grey shades to black, and any other lighter shades to white. This creates a binary black-white image, which is easier to handle.<Br>
 > 
 >     ![Binary](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/final.png)
 >
-> 3. Crop the image from each side: create an array of all the pixel colors of the image. Then cycle through each pixel by row or column until it encounters a black-colored pixel. The row/column index is saved, and the image is trimmed at that location. This process is repeated four times along each image border.<Br>
+> 3. Trim and image up to the characters: create an array of all the pixel colors of the image and cycle through each pixel by row or column until it encounters a black-colored pixel. The row/column index is then saved, and the image is trimmed at that location. This process is repeated four times along each image border.<Br>
 >
 >     ![Cropped](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-2/cropped.png)
 >
-> 4. Create images of each of the letters: give the cartesian location of each letter using it relationship to the image's length and width. These proportions will vary for every letter. In this example, 'T' is at the center of the image. This location can be defined by: ''0.5 * width'' & ''0.5 * length'' of image.<Br>
+> 4. Create sub-images for each of the letters: give the cartesian location of each letter using it relationship to the image's length and width. These proportions will vary for every letter. In this example, 'T' is at the center of the image. This location can be defined by: _''0.5 * width'' & ''0.5 * length''_ of image.<Br>
 > 
 >     ![A](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_TOP.png)
 >     ![V](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/r_BOT.png)
@@ -81,5 +81,5 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 >     ![T](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_MID.png)
 >     ![E](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/c_BOT.png)
 > 
-> 5. Send all 7 of the images through the Tesseract OCR, retrieve the letters, and send to the logic portion of the program.
+> 5. Send all 7 of the images through the Tesseract OCR, retrieve the letters, and send them to the logic portion of the program.
 > 
