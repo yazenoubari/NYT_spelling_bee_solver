@@ -31,7 +31,10 @@ In this Java program, we solve a NYTimes Spellling Bee by extracting all the pos
 > 2. Input the 6 outer letters that surround the center letter.
 
 #### __OCR Mode:__
-> 1. Take a screenshot of the game, while excluding any text other than the 7 letters of the game. 
+> 1. Take a screenshot of the game, while excluding any text other than the 7 letters of the game. (Good example below).
+> 
+>     ![Good Example](https://github.com/yazenoubari/NYT_spelling_bee_solver/blob/yazenoubari-patch-3/bee10.png)
+>
 >   - ##### ***Only [.png], [.jpg], or [.tif] file extentions are permitted.***
 > 2. Paste your image path into the program. There is a dedicated folder to save your images in the /src/resources/images directory in the project root.
 >   - ##### ***If the image path cannot be followed or the file cannot be found, the program will throw an error, and force the user into manual mode.***
